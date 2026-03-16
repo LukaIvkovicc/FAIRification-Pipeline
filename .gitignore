@@ -1,0 +1,92 @@
+# ===============================
+# Python environments & caches
+# ===============================
+.venv/
+venv/
+env/
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# pytest
+.pytest_cache/
+
+# Python packaging artifacts
+*.egg-info/
+dist/
+build/
+
+# ===============================
+# Environment / secrets
+# ===============================
+.env
+
+# ===============================
+# Editor / OS
+# ===============================
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Pipeline runtime data
+# ===============================
+
+# dataset runtime folders
+
+# dataset runtime folders (relative to this `data-automation/` folder)
+datasets/*/raw/
+datasets/*/staging/
+datasets/*/processed/
+datasets/*/canonical/
+datasets/*/exports/
+
+# pipeline outputs
+canonical/
+exports/
+publication/
+advanced/validation/
+qa_reports/
+packages/
+
+# ===============================
+# Large generated data
+# ===============================
+*.parquet
+*.feather
+*.zip
+*.tar.gz
+*.tgz
+*.sqlite
+*.db
+
+# ===============================
+# Mapping drafts
+# ===============================
+
+
+# Local/temporary config files
+configs/*.local
+
+# Sphinx / docs build
+docs/_build/
+# Notebook static/HTML outputs
+notebooks/*.html
+
+# ===============================
+# Notebook artifacts
+# ===============================
+.ipynb_checkpoints/
+notebooks/**/*.parquet
+
+# ===============================
+# Logs / temporary
+# ===============================
+*.log
+tmp/
+temp/
+.cache/
