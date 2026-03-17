@@ -1,13 +1,13 @@
 # ===============================
 # Python environments & caches
 # ===============================
-.venv/
-venv/
-env/
+data-automation/.venv/
+data-automation/venv/
+data-automation/env/
 
 __pycache__/
 *.py[cod]
-*.pyo
+*.pyogit status
 *.pyd
 
 # pytest
@@ -39,19 +39,21 @@ Thumbs.db
 # dataset runtime folders
 
 # dataset runtime folders (relative to this `data-automation/` folder)
-datasets/*/raw/
-datasets/*/staging/
-datasets/*/processed/
-datasets/*/canonical/
-datasets/*/exports/
+data-automation/datasets/*/raw/
+data-automation/datasets/*/staging/
+data-automation/datasets/*/processed/
+data-automation/datasets/*/canonical/
+data-automation/datasets/*/exports/
+data-automation/datasets/*/packages/
 
 # pipeline outputs
-canonical/
-exports/
-publication/
-advanced/validation/
-qa_reports/
-packages/
+data-automation/canonical/
+data-automation/exports/
+data-automation/publication/
+data-automation/advanced/validation/
+data-automation/qa_reports/
+data-automation/packages/
+
 
 # ===============================
 # Large generated data

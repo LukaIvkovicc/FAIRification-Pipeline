@@ -1,4 +1,4 @@
-# FAIR Ecological Data Pipeline
+# FAIR Ecological Data Pipeline and Dashboard
 
 [![status](https://img.shields.io/badge/status-experimental-orange)](#) [![python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/) [![docs](https://img.shields.io/badge/docs-available-brightgreen)](#)
 
@@ -156,9 +156,6 @@ make package DATASET=data-automation/datasets/walking_forest LABEL=v1.0
 
 ## Repository setup - FAIRification-Pipeline
 ===============================================
-Purpose
--------
-....
 
 Prerequisites (high level)
 --------------------------
