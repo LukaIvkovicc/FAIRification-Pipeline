@@ -1,0 +1,220 @@
+{
+  "summary": {
+    "dataset_id": "walking_forest_2025",
+    "dataset_title": "Oak (Quercus robur) regeneration in rewilding floodplain the Millingerwaard",
+    "profile": "ecology",
+    "has_canonical": true,
+    "n_events": 441,
+    "n_occurrences": 319,
+    "n_measurements": 10300,
+    "has_manifest": true,
+    "has_dataset_metadata": true,
+    "has_eml": true,
+    "eml_status": "draft",
+    "metadata_completeness": "minimal",
+    "has_jsonld": true,
+    "has_rocrate": true,
+    "data_standard": "darwin_core",
+    "metadata_standards": [
+      "eml",
+      "jsonld",
+      "rocrate"
+    ],
+    "ontologies_used": [
+      "environment",
+      "units",
+      "categories",
+      "taxonomy"
+    ],
+    "dwc_validation_status": "ok",
+    "n_errors": 0,
+    "n_warnings": 1,
+    "ready_to_publish": true
+  },
+  "canonical": {
+    "event.parquet": {
+      "rows": 441,
+      "columns": [
+        "eventID",
+        "eventDate"
+      ]
+    },
+    "occurrence.parquet": {
+      "rows": 319,
+      "columns": [
+        "occurrenceID",
+        "eventID",
+        "scientificName",
+        "basisOfRecord",
+        "occurrenceStatus",
+        "individualCount"
+      ],
+      "scientificName_missing_pct": 0.0
+    },
+    "measurement_or_fact.parquet": {
+      "rows": 10300,
+      "columns": [
+        "measurementID",
+        "occurrenceID",
+        "eventID",
+        "measurementType",
+        "measurementValue",
+        "measurementUnit",
+        "measurementTypeID",
+        "measurementUnitID",
+        "measurementRemarks"
+      ]
+    }
+  },
+  "errors": [],
+  "synthesized_occurrence_count": 0,
+  "dwc_checks": {
+    "event": {
+      "has_table": true,
+      "required_terms_present": true
+    },
+    "occurrence": {
+      "has_table": true,
+      "required_terms_present": true
+    },
+    "measurement_or_fact": {
+      "has_table": true,
+      "required_terms_present": true
+    }
+  },
+  "warnings": [
+    "event.eventDate has many values that do not parse cleanly as dates; please check date formats in the canonical tables."
+  ],
+  "processed": {
+    "processed": {
+      "soil_measurements.parquet": {
+        "rows": 303,
+        "dtypes": {
+          "id": "string",
+          "replicate": "int64",
+          "group": "string",
+          "date": "datetime64[ns]",
+          "time": "string",
+          "moisture_content_pct": "string",
+          "pore_water_ec_ms_m_1": "string",
+          "temperature_c": "float64",
+          "_etl_source_table": "string",
+          "_etl_source_id": "string",
+          "datetime_local": "datetime64[ns]"
+        }
+      },
+      "oak_measurements.parquet": {
+        "rows": 294,
+        "dtypes": {
+          "id": "string",
+          "species": "string",
+          "dbh_cm": "string",
+          "height_m": "float64",
+          "browsing": "float64",
+          "twig_stem_browsing": "string",
+          "branch_height_cm": "string",
+          "total_dung_n": "float64",
+          "horse_n": "float64",
+          "cattle_n": "float64",
+          "uncertain": "float64",
+          "rabbit_pellets_n": "float64",
+          "thorny_shrubs_n": "float64",
+          "thorny_shrubs_0_1m": "float64",
+          "thorny_shrubs_1_2m": "float64",
+          "thorny_shrubs_2m": "float64",
+          "coverage": "string",
+          "other_species_n": "float64",
+          "other_species_0_1m": "float64",
+          "other_species_1_2m": "float64",
+          "other_species_2m": "float64",
+          "notes": "string",
+          "_etl_source_table": "string",
+          "_etl_source_id": "string",
+          "dbh_m": "Float64",
+          "branch_height_m": "Float64"
+        }
+      },
+      "woody_species.parquet": {
+        "rows": 1054,
+        "dtypes": {
+          "id": "string",
+          "species": "string",
+          "height_class": "string",
+          "count": "float64",
+          "type": "string",
+          "_etl_source_table": "string",
+          "_etl_source_id": "string"
+        }
+      },
+      "control_plots.parquet": {
+        "rows": 50,
+        "dtypes": {
+          "id": "string",
+          "thorny_shrubs": "int64",
+          "thorny_shrub_0_1m": "int64",
+          "thorny_shrub_1_2m": "int64",
+          "thorny_shrub_gt2m": "int64",
+          "coverage": "string",
+          "other_species": "int64",
+          "other_species_0_1": "int64",
+          "other_species_1_2": "int64",
+          "other_species_gtm_2": "int64",
+          "dung": "int64",
+          "_etl_source_table": "string",
+          "_etl_source_id": "string"
+        }
+      },
+      "distance_data.parquet": {
+        "rows": 100,
+        "dtypes": {
+          "id": "string",
+          "group": "string",
+          "elevation": "float64",
+          "distnance_to_path": "float64",
+          "distance_to_water": "float64",
+          "distance_to_forest": "float64",
+          "_etl_source_table": "string",
+          "_etl_source_id": "string"
+        }
+      }
+    },
+    "object_dtypes": []
+  },
+  "metadata": {
+    "files": {
+      "manifest.json": {
+        "status": "ok"
+      },
+      "dataset_metadata.json": {
+        "status": "ok"
+      },
+      "metadata.jsonld": {
+        "status": "ok"
+      },
+      "qa_report.json": {
+        "status": "ok"
+      },
+      "ro-crate-metadata.json": {
+        "status": "ok"
+      },
+      "eml_draft.xml": {
+        "status": "ok"
+      }
+    },
+    "errors": []
+  },
+  "standards": {
+    "data": "darwin_core",
+    "metadata": [
+      "eml",
+      "jsonld",
+      "rocrate"
+    ],
+    "ontologies": [
+      "environment",
+      "units",
+      "categories",
+      "taxonomy"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+About this EML file
+
+eml_draft.xml was generated automatically by the LTER-LIFE ETL pipeline.
+
+It is a minimal metadata draft that is meant to be completed and finalised in ezEML.
+
+Complete the metadata in ezEML
+
+1. Go to: https://ezeml.edirepository.org/
+2. Create a new dataset by importing an existing EML file.
+3. Upload eml_draft.xml from this metadata/ folder.
+
+In ezEML, complete the required dataset-level information, including:
+
+- Contact (with email address)
+- Temporal coverage
+- Project information
+- Optional but recommended: ORCID IDs for creators
+
+When ezEML asks for data tables:
+
+- Upload the CSV exports produced by the pipeline (e.g. Darwin Core or other standard CSV files).
+- ezEML will guide you through any remaining required fields (e.g. table descriptions, record counts, checksums).
+
+Finalising
+
+1. Export the completed metadata from ezEML and save it in this folder as: eml_curated.xml
+
+eml_curated.xml is the final, repository-ready metadata record.
+
+If the pipeline is run again, only draft metadata is regenerated. Curated metadata files such as eml_curated.xml are not modified or overwritten.

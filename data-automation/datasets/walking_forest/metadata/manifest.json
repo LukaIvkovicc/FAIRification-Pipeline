@@ -1,0 +1,29 @@
+{
+  "dataset_id": "walking_forest_2025",
+  "files": [
+    {
+      "path": "canonical/event.parquet",
+      "kind": "data",
+      "sha256": "c22da3a255c9ee64e63e9f7212d79511aece9f683902ee2b53f3595293c0f590",
+      "size_bytes": 5381
+    },
+    {
+      "path": "canonical/measurement_or_fact.parquet",
+      "kind": "data",
+      "sha256": "ac7b1875341f6c8290cab000e9e3575d9dda82606551fe6858d587f6f536fee3",
+      "size_bytes": 114519
+    },
+    {
+      "path": "canonical/occurrence.parquet",
+      "kind": "data",
+      "sha256": "be0808222a2895b6b93b92b34b6d815bd8be654e366490332010df070d161030",
+      "size_bytes": 8231
+    },
+    {
+      "path": "metadata/qa_report.json",
+      "kind": "qa_report",
+      "sha256": "eb25ad1f5119f8c78b6c9f8178e657ac65ea62e57dc6270e8570b288560ca2cf",
+      "size_bytes": 5584
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+meta:
+  generated_by: etl.helpers.suggest_mapping
+  generated_at: '2026-03-17T20:17:21.376447+01:00'
+  standard: Darwin Core
+  version: 2023-10
+  description: Auto-generated DwC mapping (suggested). Human review required.
+  column_schema: canonical
+  source_clean_columns_hash: 3b7f9e575abf2f53f24ed082d5ff0002d0e1acfca2f2e0227b8ca64749c4fc8a
+  confidence_summary:
+    mean: 0.876
+    count: 52
+ontology_annotations: {}
+tables:
+  control_plots.parquet:
+    event:
+      eventID: id
+    occurrence:
+      occurrenceID: id
+      scientificName: other_species
+      basisOfRecord:
+        constant: HumanObservation
+      occurrenceStatus:
+        constant: present
+    measurements:
+    - source: thorny_shrubs
+      measurementType: thorny shrubs
+    - source: thorny_shrub_0_1m
+      measurementType: thorny shrub 0 1m
+    - source: thorny_shrub_1_2m
+      measurementType: thorny shrub 1 2m
+    - source: thorny_shrub_gt2m
+      measurementType: thorny shrub gt2m
+    - source: coverage
+      measurementType: coverage
+      measurementRemarks: AUTO-SUGGESTED; review confidence
+    - source: other_species_0_1
+      measurementType: other species 0 1
+    - source: other_species_1_2
+      measurementType: other species 1 2
+    - source: other_species_gtm_2
+      measurementType: other species gtm 2
+    - source: dung
+      measurementType: dung
+    - source: etl_source_table
+      measurementType: _etl_source_table
+      measurementUnit: text
+    - source: etl_source_id
+      measurementType: _etl_source_id
+      measurementUnit: text
+  distance_data.parquet:
+    event:
+      eventID: id
+    occurrence:
+      occurrenceID: id
+    measurements:
+    - source: group
+      measurementType: group
+      measurementUnit: text
+    - source: elevation
+      measurementType: elevation
+    - source: distnance_to_path
+      measurementType: distnance to path
+    - source: distance_to_water
+      measurementType: distance to water
+    - source: distance_to_forest
+      measurementType: distance to forest
+    - source: etl_source_table
+      measurementType: _etl_source_table
+      measurementUnit: text
+    - source: etl_source_id
+      measurementType: _etl_source_id
+      measurementUnit: text
+  oak_measurements.parquet:
+    event:
+      eventID: id
+      eventRemarks: notes
+    occurrence:
+      occurrenceID: id
+      scientificName: species
+      basisOfRecord:
+        constant: HumanObservation
+      occurrenceStatus:
+        constant: present
+    measurements:
+    - source: dbh_cm
+      measurementType: dbh cm
+      measurementUnit: cm
+    - source: height_m
+      measurementType: height m
+      measurementUnit: m
+    - source: browsing
+      measurementType: browsing
+    - source: twig_stem_browsing
+      measurementType: twig stem browsing
+      measurementRemarks: AUTO-SUGGESTED; review confidence
+    - source: branch_height_cm
+      measurementType: branch height cm
+      measurementUnit: cm
+    - source: total_dung_n
+      measurementType: total dung count
+      measurementUnit: n
+    - source: horse_n
+      measurementType: horse count
+      measurementUnit: n
+    - source: cattle_n
+      measurementType: cattle count
+      measurementUnit: n
+    - source: uncertain
+      measurementType: uncertain
+    - source: rabbit_pellets_n
+      measurementType: rabbit pellets count
+      measurementUnit: n
+    - source: thorny_shrubs_n
+      measurementType: thorny shrubs count
+      measurementUnit: n
+    - source: thorny_shrubs_0_1m
+      measurementType: thorny shrubs 0 1m
+    - source: thorny_shrubs_1_2m
+      measurementType: thorny shrubs 1 2m
+    - source: thorny_shrubs_2m
+      measurementType: thorny shrubs 2m
+    - source: coverage
+      measurementType: coverage
+      measurementRemarks: AUTO-SUGGESTED; review confidence
+    - source: other_species_n
+      measurementType: other species count
+      measurementUnit: n
+    - source: other_species_0_1m
+      measurementType: other species 0 1m
+    - source: other_species_1_2m
+      measurementType: other species 1 2m
+    - source: other_species_2m
+      measurementType: other species 2m
+    - source: etl_source_table
+      measurementType: _etl_source_table
+      measurementUnit: text
+    - source: etl_source_id
+      measurementType: _etl_source_id
+      measurementUnit: text
+  soil_measurements.parquet:
+    event:
+      eventID: id
+      eventDate: date
+      eventTime: time
+    occurrence:
+      occurrenceID: id
+    measurements:
+    - source: replicate
+      measurementType: replicate
+    - source: group
+      measurementType: group
+      measurementUnit: text
+    - source: moisture_content_pct
+      measurementType: moisture content pct
+      measurementUnit: pct
+    - source: pore_water_ec_ms_m_1
+      measurementType: pore_water_ec_ms_m_1
+      measurementUnit: text
+    - source: temperature_c
+      measurementType: temperature c
+      measurementUnit: c
+    - source: etl_source_table
+      measurementType: _etl_source_table
+      measurementUnit: text
+    - source: etl_source_id
+      measurementType: _etl_source_id
+      measurementUnit: text
+  woody_species.parquet:
+    event:
+      eventID: id
+      measurementType: type
+    occurrence:
+      occurrenceID: id
+      scientificName: species
+      basisOfRecord:
+        constant: HumanObservation
+      occurrenceStatus:
+        constant: present
+    measurements:
+    - source: height_class
+      measurementType: height class
+      measurementRemarks: AUTO-SUGGESTED; review confidence
+    - source: count
+      measurementType: count
+      measurementUnit: count
+    - source: etl_source_table
+      measurementType: _etl_source_table
+      measurementUnit: text
+    - source: etl_source_id
+      measurementType: _etl_source_id
+      measurementUnit: text

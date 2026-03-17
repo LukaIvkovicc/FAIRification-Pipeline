@@ -1,0 +1,105 @@
+profile_id: ecology
+title: "Ecological Monitoring Datasets"
+description: >
+  Ecological datasets organised around plots or sites, including
+  vegetation, soil, distance, and environmental measurements.Supports replicated measurements and integration with biodiversity and environmental standards.
+
+defaults:
+  standards:
+    data: darwin_core
+    metadata:
+      - eml
+      - jsonld
+      - rocrate
+
+cores:
+  event:
+    required: true
+  occurrence:
+    required: false
+  measurement_or_fact:
+    required: true
+
+replication:
+  supported: true
+  replicate_field: replicate
+  aggregation_recommended: true
+
+spatial:
+  geometry: point
+  required: true
+  coordinate_fields_expected:
+    - decimalLatitude
+    - decimalLongitude
+  alternative_sources_allowed: true
+
+temporal:
+  event_date_required: true
+  event_time_optional: true
+
+expected_entities:
+  plot:
+    required: true
+  site:
+    required: false
+  measurement:
+    required: true
+  note: "Descriptive guidance for dataset structure; enforcement is profile-driven."
+
+measurement_model:
+  type: long                
+  wide_allowed: false
+  replicate_as_row: true
+
+ontologies:
+  environment: ENVO
+  units: UO
+  categories: SKOS
+  taxonomy:
+    required: false
+    recommended_sources:
+      - GBIF_Backbone
+      - WoRMS
+
+# FAIR maturity levels supported by this profile
+fair_levels:
+  minimum:
+    require_ontologies: false
+  recommended:
+    require_ontologies: false
+  advanced:
+    require_ontologies: true
+
+validation_rules:
+  darwin_core:
+    required:
+      - eventID
+      - measurementType
+      - measurementValue
+      - measurementUnit
+
+    taxonomy:
+      recommended: true
+      required_if_present: true
+
+    ontology:
+      required_if_available: true
+      required_fields:
+        - measurementTypeID
+      recommended_fields:
+        - measurementUnitID
+      allow_local_terms: true
+      documentation_required_if_local: true
+
+outputs:
+  canonical_tables:
+    - event
+    - measurement_or_fact
+    - occurrence
+  dwc_csv: true
+
+notes:
+  - >
+    This profile assumes plot- or site-level sampling and is suitable
+    for long-term ecological monitoring datasets.
+ 

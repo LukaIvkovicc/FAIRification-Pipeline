@@ -1,0 +1,102 @@
+# human readible metadata derived from word.docx file for walking_forest dataset
+id: "walking_forest"
+title: "Millingerwaard Oak Browsing and Vegetation Survey (2024)"
+description: 
+  Field survey of 292 oak individuals and 50 control plots in the Millingerwaard
+  floodplain area (The Netherlands). Measurements include oak size (DBH, height),
+  browsing damage, thorny shrub structure, woody species composition,
+  dung counts (herbivores and rabbits), soil moisture/temperature/EC (three replicates),
+  and distances to landscape features (paths, water bodies, forest edges).
+spatial_scope:
+  location_name: "Millingerwaard, Gelderland, The Netherlands"
+  location_description: "Rewilding project area along the Waal River"
+  crs: "EPSG:28992"
+temporal_scope:
+  sampling_dates:
+    - "<start date>"
+    - "<end date>"
+    # Add more dates if needed
+methods:
+  field_protocol: >
+    Oak and control plots were surveyed using 4x4 m vegetation subplots and
+    10x10 m dung-count plots. DBH was measured at 130 cm height when possible,
+    or at 20 cm for smaller individuals (flagged separately). Soil properties
+    were measured using handheld moisture, EC, and temperature probes with
+    three replicate readings per plot. Distances to landscape features were
+    derived from GIS layers.
+variables:
+  oak_measurements:
+    description: "Tree-level metrics of 292 oaks"
+    columns:
+      id: "Unique oak identifier (MW_Oak_###)"
+      species_verbatim: "Verbatim species name (all oaks)"
+      dbh_cm: "Diameter at breast height or at 20 cm for saplings"
+      height_m: "Tree height"
+      browsing: "Binary indicator of browsing damage (0/1)"
+      browsing_type: "Type of browsing (twig, stem, both)"
+      highest_branch_height_cm: "Height of highest branch"
+      dung_total: "Total dung piles in 10x10 m plot"
+      thorny_cover_class: "Cover class of thorny shrubs (<25%, 25-75%, >75%)"
+  woody_species:
+    description: "Shrub & woody species composition per plot"
+    columns:
+      plot_id: "Associated oak or control plot ID"
+      species_verbatim: "Species name found in subplot"
+      height_class_verbatim: "small / middle / large"
+      count: "Number of individuals in that class"
+      shrub_type: "Thorny shrub / other woody species"
+  soil_measurements:
+    description: "Soil moisture, pore water EC, temperature"
+    columns:
+      id: "Plot ID"
+      replicate: "Replicate number 1-3"
+      moisture_pct: "Soil moisture content (%)"
+      porewater_ec_ms_m: "Soil pore water EC"
+      soil_temp_c: "Soil temperature (°C)"
+  distance_data:
+    description: "GIS-derived distances from each plot to key landscape features"
+    columns:
+      id: "Plot ID"
+      elevation_m: "Elevation above sea level"
+      dist_path_m: "Distance to nearest path"
+      dist_water_m: "Distance to nearest water body"
+      dist_forest_m: "Distance to forest edge"
+contributors:
+  - name: "Celine Sijlmans "
+    affiliation: "NIOO-KNAW"
+    role: "Field data collector"
+  - name: "Nacho Villar"
+    affiliation: "NIOO-KNAW"
+    role: "Supervisor"
+  - name: "Luka Ivkovic"
+    affiliation: "NIOO-KNAW, LTER-LIFE"
+    role: "Data mobilization / FAIR processing"
+license: "CC-BY-4.0"     #likey this one
+keywords:
+  - browsing
+  - rewilding
+  - thorny shrubs
+  - soil moisture
+  - vegetation structure
+  - woody species composition
+  - mammal herbivory
+raw_files:
+  - "raw/walking_forest_2025.xlsx"
+themes:
+  - "Ecology"
+  - "Vegetation monitoring"
+  - "Rewilding"
+  - "Soil properties"
+standards_to_be_used:
+  - dwc: "Darwin Core terms (ID, eventDate, organism, measurement)"
+  - envo: "ENVO biome & feature terms (forest edge, shrubland)"
+  - ucum: "Units mapped to UCUM (cm, m, %, °C)"
+data_quality:
+  notes: >
+    Some DBH values measured at 20 cm; flagged accordingly. Some dung
+    categories (horse vs. cattle) unreliable for first few rows.
+    Soil moisture contains missing values marked as UR (under range).
+
+# Note: This metadata is based on the provided Word document and may need further refinement or expansion based on additional details from the original source.
+
+

@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://schema.org/"
+  ],
+  "@type": "Dataset",
+  "name": "Oak (Quercus robur) regeneration in rewilding floodplain the Millingerwaard",
+  "description": "",
+  "keywords": [],
+  "license": "",
+  "publisher": "",
+  "dateModified": "2026-03-17T19:02:00.827967+00:00",
+  "numberOfRows": 0,
+  "provenance": [
+    {
+      "path": "canonical/event.parquet",
+      "sizeBytes": 5381,
+      "sha256": "c22da3a255c9ee64e63e9f7212d79511aece9f683902ee2b53f3595293c0f590",
+      "kind": "data"
+    },
+    {
+      "path": "canonical/measurement_or_fact.parquet",
+      "sizeBytes": 114519,
+      "sha256": "ac7b1875341f6c8290cab000e9e3575d9dda82606551fe6858d587f6f536fee3",
+      "kind": "data"
+    },
+    {
+      "path": "canonical/occurrence.parquet",
+      "sizeBytes": 8231,
+      "sha256": "be0808222a2895b6b93b92b34b6d815bd8be654e366490332010df070d161030",
+      "kind": "data"
+    }
+  ]
+}

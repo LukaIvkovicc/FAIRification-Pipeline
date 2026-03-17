@@ -1,0 +1,62 @@
+meta:
+  generated_at: '2026-03-17T19:17:18.658545+00:00'
+  generated_by: etl.ingest
+  method: builtin
+tables:
+  oak_measurements:
+    ID: id
+    Species: species
+    DBH (cm): dbh_cm
+    Height (m): height_m
+    Browsing: browsing
+    Twig/stem browsing: twig_stem_browsing
+    Branch height (cm): branch_height_cm
+    '# Total dung': total_dung_n
+    '# Horse': horse_n
+    '# Cattle': cattle_n
+    Uncertain: uncertain
+    '# Rabbit pellets': rabbit_pellets_n
+    '# Thorny shrubs': thorny_shrubs_n
+    Thorny shrubs|0-1m: thorny_shrubs_0_1m
+    Thorny shrubs|1-2m: thorny_shrubs_1_2m
+    Thorny shrubs|>2m: thorny_shrubs_2m
+    Coverage: coverage
+    '# Other species': other_species_n
+    Other species|0-1m: other_species_0_1m
+    Other species|1-2m: other_species_1_2m
+    Other species|>2m: other_species_2m
+    Notes: notes
+  control_plots:
+    ID: id
+    Thorny shrubs: thorny_shrubs
+    thorny_shrub_0_1m: thorny_shrub_0_1m
+    thorny_shrub_1_2m: thorny_shrub_1_2m
+    thorny_shrub_gt2m: thorny_shrub_gt2m
+    Coverage: coverage
+    Other Species: other_species
+    Other_species_0_1: other_species_0_1
+    Other_species_1_2: other_species_1_2
+    Other_species_gtm_2: other_species_gtm_2
+    Dung: dung
+  woody_species:
+    ID: id
+    Species: species
+    Height Class: height_class
+    Count: count
+    Type: type
+  soil_measurements:
+    ID: id
+    Replicate: replicate
+    Group: group
+    Date: date
+    Time: time
+    Moisture content (%): moisture_content_pct
+    Pore Water EC (mS.m-1): pore_water_ec_ms_m_1
+    Temperature (˚C): temperature_c
+  distance_data:
+    ID: id
+    Group: group
+    Elevation: elevation
+    Distnance to path: distnance_to_path
+    Distance to water: distance_to_water
+    Distance to forest: distance_to_forest

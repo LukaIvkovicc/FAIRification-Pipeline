@@ -1,0 +1,103 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      },
+      "about": {
+        "@id": "./"
+      },
+      "dateCreated": "2026-03-07T00:14:57.018861+00:00"
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Oak (Quercus robur) regeneration in rewilding floodplain the Millingerwaard",
+      "identifier": "walking_forest_2025",
+      "description": "Field survey of 292 oak individuals and 50 control plots in the Millingerwaard floodplain area (The Netherlands). Measurements include oak size (DBH, height), browsing damage, thorny shrub structure, woody species composition, dung counts (herbivores and rabbits), soil moisture/temperature/EC (three replicates), and distances to landscape features (paths, water bodies, forest edges).",
+      "license": "CC-BY-4.0",
+      "keywords": [
+        "browsing",
+        "rewilding",
+        "thorny shrubs",
+        "soil moisture",
+        "vegetation structure",
+        "woody species composition",
+        "mammal herbivory"
+      ],
+      "author": [
+        {
+          "@id": "#person-1"
+        },
+        {
+          "@id": "#person-2"
+        },
+        {
+          "@id": "#person-3"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "canonical/event.parquet"
+        },
+        {
+          "@id": "canonical/measurement_or_fact.parquet"
+        },
+        {
+          "@id": "canonical/occurrence.parquet"
+        },
+        {
+          "@id": "metadata/qa_report.json"
+        }
+      ]
+    },
+    {
+      "@id": "#person-1",
+      "@type": "Person",
+      "name": "Celine <SURNAME>",
+      "affiliation": "NIOO-KNAW"
+    },
+    {
+      "@id": "#person-2",
+      "@type": "Person",
+      "name": "Nacho Villar",
+      "affiliation": "NIOO-KNAW"
+    },
+    {
+      "@id": "#person-3",
+      "@type": "Person",
+      "name": "Luka Ivkovic",
+      "affiliation": "NIOO-KNAW, LTER-LIFE"
+    },
+    {
+      "@id": "canonical/event.parquet",
+      "@type": "File",
+      "contentSize": 5381,
+      "sha256": "c22da3a255c9ee64e63e9f7212d79511aece9f683902ee2b53f3595293c0f590",
+      "encodingFormat": "application/x-parquet"
+    },
+    {
+      "@id": "canonical/measurement_or_fact.parquet",
+      "@type": "File",
+      "contentSize": 114519,
+      "sha256": "ac7b1875341f6c8290cab000e9e3575d9dda82606551fe6858d587f6f536fee3",
+      "encodingFormat": "application/x-parquet"
+    },
+    {
+      "@id": "canonical/occurrence.parquet",
+      "@type": "File",
+      "contentSize": 8231,
+      "sha256": "be0808222a2895b6b93b92b34b6d815bd8be654e366490332010df070d161030",
+      "encodingFormat": "application/x-parquet"
+    },
+    {
+      "@id": "metadata/qa_report.json",
+      "@type": "File",
+      "contentSize": 5438,
+      "sha256": "21421c39b919fd64eff7b8d4aa9f161f95caad7ddf44660415c99df4300f501c"
+    }
+  ]
+}

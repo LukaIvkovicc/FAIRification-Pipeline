@@ -1,0 +1,61 @@
+# dataset config mapping file for Walking Forest dataset
+dataset:
+  id: walking_forest_2025
+  title: "Oak (Quercus robur) regeneration in rewilding floodplain the Millingerwaard"
+  profile: ecology
+
+sources:
+  - id: walking_forest_excel
+    type: excel
+    path: raw/walking_forest_2025.xlsx
+
+cleaning:
+  enabled: true    # set to false to skip cleaning and use raw column names; true to apply mappings in 'mappings/clean_columns.yaml'
+  method: builtin  # use 'pyjanitor' for camelCase or complex headers; falls back to 'builtin' if not installed
+  write_mapping: true # write the mapping file to 'mappings/clean_columns.yaml' for review and reuse; set to false to skip writing the mapping file
+
+tables:
+
+  oak_measurements:
+    source: walking_forest_excel
+    sheet: "Oak measurements"
+    primary_key: id
+
+  control_plots:
+    source: walking_forest_excel
+    sheet: "Control measurements"
+    primary_key: id
+
+  woody_species:
+    source: walking_forest_excel
+    sheet: "Woody species"
+
+  soil_measurements:
+    source: walking_forest_excel
+    sheet: "Soil measurements"
+
+  distance_data:
+    source: walking_forest_excel
+    sheet: "Distance analyses"
+
+derivations:
+  - target: dbh_m
+    source: dbh_cm
+    operation: divide
+    value: 100
+    unit: m
+    description: "Convert DBH from cm to meters"
+
+  - target: branch_height_m
+    source: branch_height_cm
+    operation: divide
+    value: 100
+    unit: m
+    description: "Convert branch height from cm to meters"
+
+  - target: datetime_local
+    sources: [date, time]
+    operation: combine_datetime_flexible
+    assume_year: 2024
+    dayfirst: true
+    description: "Combine date and time into datetime_local"

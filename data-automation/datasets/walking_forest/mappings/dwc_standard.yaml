@@ -1,0 +1,322 @@
+#datasets/walking_forest/mappings/dwc_standard.yaml
+# Darwin Core mapping for the Walking Forest dataset.
+# Ontology fields here are OPTIONAL FAIR add-ons; core DwC fields are
+# eventID/occurrenceID/scientificName/measurementType/measurementValue/measurementUnit.
+
+meta:
+  standard: Darwin Core
+  version: 2023-10
+  description: >
+    Darwin Core mapping for the Walking Forest dataset.
+    Ontology identifiers are OPTIONAL and can be enforced depending
+    on FAIR maturity level.
+
+tables:
+
+  oak_measurements.parquet:
+    event:
+      eventID: id
+
+    occurrence:
+      occurrenceID: id
+      scientificName: species
+      basisOfRecord:
+        constant: HumanObservation
+      occurrenceStatus:
+        constant: present
+
+    measurements:
+
+      - source: dbh_cm
+        measurementType: diameter at breast height
+        measurementUnit: cm
+
+      - source: dbh_m
+        measurementType: diameter at breast height
+        measurementUnit: m
+        measurementRemarks: "Derived from dbh_cm"
+
+      - source: height_m
+        measurementType: plant height
+        measurementUnit: m
+
+      - source: browsing
+        measurementType: browsing presence
+        measurementUnit: boolean
+            
+      - source: twig_stem_browsing
+        measurementType: browsing type
+        measurementUnit: text
+  
+      - source: branch_height_cm
+        measurementType: branch height
+        measurementUnit: cm
+
+      - source: total_dung_n
+        measurementType: dung count (total)
+        measurementUnit: count
+
+      - source: horse_n
+        measurementType: dung count (horse)
+        measurementUnit: count
+        measurementRemarks: "Field note: tentative horse vs cattle classification; treat as lower confidence."
+
+      - source: cattle_n
+        measurementType: dung count (cattle)
+        measurementUnit: count
+        measurementRemarks: "Field note: tentative horse vs cattle classification; treat as lower confidence."
+
+      - source: uncertain
+        measurementType: dung count (uncertain species)
+        measurementUnit: count
+
+      - source: rabbit_pellets_n
+        measurementType: rabbit pellet pile count
+        measurementUnit: count
+
+      - source: thorny_shrubs_n
+        measurementType: thorny shrub count (total)
+        measurementUnit: count
+
+      - source: thorny_shrubs_0_1m
+        measurementType: thorny shrub count (0-1 m)
+        measurementUnit: count
+
+      - source: thorny_shrubs_1_2m
+        measurementType: thorny shrub count (1-2 m)
+        measurementUnit: count
+
+      - source: thorny_shrubs_2m
+        measurementType: thorny shrub count (>2 m)
+        measurementUnit: count
+
+      - source: other_species_n
+        measurementType: other woody species count (total)
+        measurementUnit: count
+
+      - source: other_species_0_1m
+        measurementType: other woody species count (0-1 m)
+        measurementUnit: count
+
+      - source: other_species_1_2m
+        measurementType: other woody species count (1-2 m)
+        measurementUnit: count
+
+      - source: other_species_2m
+        measurementType: other woody species count (>2 m)
+        measurementUnit: count
+
+      - source: coverage
+        measurementType: vegetation cover class
+        measurementUnit: categorical
+
+      - source: notes
+        measurementType: observer notes
+        measurementUnit: text
+
+
+  woody_species.parquet:
+
+    event:
+      eventID: id
+
+    occurrence:
+      occurrenceID: id
+      scientificName: species
+      individualCount: count
+      basisOfRecord:
+        constant: HumanObservation
+      occurrenceStatus:
+        constant: present
+
+    measurements:
+
+      - source: height_class
+        measurementType: plant height class
+        measurementUnit: categorical
+
+      - source: type
+        measurementType: woody growth form
+        measurementUnit: categorical
+
+
+  control_plots.parquet:
+
+    event:
+      eventID: id
+
+    measurements:
+    
+      - source: thorny_shrubs
+        measurementType: thorny shrub count (total)
+        measurementUnit: count
+        
+      - source: thorny_shrub_0_1m
+        measurementType: thorny shrub count (0-1 m)
+        measurementUnit: count
+
+      - source: thorny_shrub_1_2m
+        measurementType: thorny shrub count (1-2 m)
+        measurementUnit: count
+
+      - source: thorny_shrub_gt2m
+        measurementType: thorny shrub count (>2 m)
+        measurementUnit: count
+
+      - source: other_species
+        measurementType: other woody species count (total)
+        measurementUnit: count
+
+      - source: other_species_0_1
+        measurementType: other woody species count (0-1 m)
+        measurementUnit: count
+
+      - source: other_species_1_2
+        measurementType: other woody species count (1-2 m)
+        measurementUnit: count
+
+      - source: other_species_gtm_2
+        measurementType: other woody species count (>2 m)
+        measurementUnit: count
+
+      - source: coverage
+        measurementType: vegetation cover class
+        measurementUnit: categorical
+
+      - source: dung
+        measurementType: dung count
+        measurementUnit: count
+
+
+  soil_measurements.parquet:
+
+    event:
+      eventID: id
+      eventDate: datetime_local
+
+    measurements:
+
+      - source: moisture_content_pct
+        measurementType: soil moisture
+        measurementUnit: percent
+
+      - source: pore_water_ec_ms_m_1
+        measurementType: porewater electrical conductivity
+        measurementUnit: mS m-1
+
+      - source: temperature_c
+        measurementType: soil temperature
+        measurementUnit: C
+
+      - source: replicate
+        measurementType: sample replicate
+        measurementUnit: count
+
+      - source: group
+        measurementType: plot group
+        measurementUnit: categorical
+
+
+  distance_data.parquet:
+
+    event:
+      eventID: id
+
+    measurements:
+
+      - source: elevation
+        measurementType: elevation
+        measurementUnit: m
+
+      - source: distnance_to_path
+        measurementType: distance to path
+        measurementUnit: m
+
+      - source: distance_to_water
+        measurementType: distance to water
+        measurementUnit: m
+
+      - source: distance_to_forest
+        measurementType: distance to forest
+        measurementUnit: m
+
+      - source: group
+        measurementType: plot group
+        measurementUnit: categorical
+
+#ontology mappings and controlled vocabularies 
+ontology_annotations:
+
+  measurementType:
+
+    diameter at breast height:
+      ECSO: http://purl.dataone.org/odo/ECSO_00000549
+
+    soil temperature:
+      ENVO: http://purl.obolibrary.org/obo/ENVO_09200012
+
+    soil moisture:
+      ECSO: http://purl.dataone.org/odo/ECSO_00000517
+
+    porewater electrical conductivity:
+      ENVO: http://purl.obolibrary.org/obo/ENVO_09200018
+      
+    elevation:
+      ECSO: http://purl.dataone.org/odo/ECSO_00001567
+
+  measurementUnit:
+
+    m:
+      UO: http://purl.obolibrary.org/obo/UO_0000008
+
+    cm:
+      UO: http://purl.obolibrary.org/obo/UO_0000015
+
+    percent:
+      UO: http://purl.obolibrary.org/obo/UO_0000187
+
+    count:
+      UO: http://purl.obolibrary.org/obo/UO_0000189
+
+    boolean:
+      PATO: http://purl.obolibrary.org/obo/PATO_0000047
+
+    categorical:
+      SKOS: ConceptScheme
+
+    text:
+      IAO: http://purl.obolibrary.org/obo/IAO_0000300
+
+
+categorical_vocabularies:
+
+  cover_class:
+    scheme: SKOS
+    documentation: EML
+
+  browsing_type:
+    scheme: SKOS
+    documentation: EML
+
+  woody_type:
+    scheme: SKOS
+    documentation: EML
+
+  plot_group:
+    scheme: SKOS
+    documentation: EML
+
+
+
+# Columns intentionally not mapped to DwC (recommendation: include as supplemental dataTable in EML):
+# - All `*_raw` original text/source columns (keep for provenance)
+# - All `*_notes` columns (preserve, export as dataTable or populate measurementRemarks)
+# - Derived analysis tables or QA columns (keep as supplemental)
+
+# Vocabulary suggestions for non-DwC concepts:
+# - `cover_class` values can be mapped to ENVO (e.g., 'open'/'closed' -> ENVO land cover terms) or documented
+#   in EML attributeList and exported as a categorical measurement with `measurementUnit: categorical`.
+# - `browsing_type`, `woody_type` free-text categories: propose mapping to a controlled vocabulary or export as text
+#   and include allowed values in EML.
+
+# CONSIDER ADDING MORE ONTOLOGY MAPPINGS HERE IF NEEDED

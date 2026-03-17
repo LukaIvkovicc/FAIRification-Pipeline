@@ -1,0 +1,14 @@
+# Developer tools
+black
+isort
+flake8
+mypy
+pytest
+rich
+loguru
+pre-commit
+ipython
+bump2version
+twine   
+jupyter
+ipywidgets
