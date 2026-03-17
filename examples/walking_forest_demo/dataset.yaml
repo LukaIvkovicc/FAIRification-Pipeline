@@ -1,0 +1,19 @@
+dataset:
+  id: walking_forest_demo
+  title: "Walking Forest Demo"
+  profile: ecology_plot
+
+sources:
+  - id: demo_csv
+    type: csv
+    path: raw/demo.csv
+
+cleaning:
+  enabled: true
+  method: builtin
+  write_mapping: true
+
+tables:
+  demo_table:
+    source: demo_csv
+    primary_key: id
