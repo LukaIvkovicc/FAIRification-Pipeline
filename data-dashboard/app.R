@@ -2433,8 +2433,6 @@ observeEvent(c(input$package_choice, input$refresh_package_list), {
       "Median groundwater depth",
       "Forest bird richness"
     ),
-    value = c("9", "3.1", "1.2", "34"),
-    unit = c("µg/m³ (2023)", "% (0–10 cm)", "m (2022)", "species / km²"),
     dataset = c(
       "Luchtmeetnet – Veluwe stations",
       "Soil monitoring network (example)",
