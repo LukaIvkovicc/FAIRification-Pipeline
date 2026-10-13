@@ -35,7 +35,7 @@ All generated outputs (build artifacts, intermediate files, packages, etc.) are 
 
 | Guide                                                                                        | Description            |
 | -------------------------------------------------------------------------------------------- | ---------------------- |
-| [`data-automation/README.md`](data-automation/README.md)                                     | ETL pipeline overview  |
+| [`data-automation/README.md`](data-automation/README.md)                                     | FAIRification pipeline overview  |
 | [`data-automation/PIPELINE.md`](data-automation/PIPELINE.md)                                 | Operator runbook       |
 | [`data-automation/datasets/profiles/README.md`](data-automation/datasets/profiles/README.md) | Dataset profile system |
 | [`data-automation/dataset_author_guide.md`](data-automation/dataset_author_guide.md)         | Adding new datasets    |
