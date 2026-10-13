@@ -50,7 +50,7 @@ The repository contains two independent but complementary components:
 
 | Component           | Description                                                                                              |
 | ------------------- | -------------------------------------------------------------------------------------------------------- |
-| **data-automation** | Python ETL pipeline for ingesting, structuring, mapping to standards, validating, and exporting datasets |
+| **data-automation** | Python FAIRification ("ETL") pipeline for ingesting, structuring, mapping to standards, validating, and exporting datasets |
 | **data-dashboard**  | R/Shiny application for inspecting datasets and reviewing pipeline outputs                               |
 
 The dashboard enhances usability but is **not required** to run the pipeline.
